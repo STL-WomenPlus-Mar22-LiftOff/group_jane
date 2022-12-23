@@ -8,12 +8,13 @@ Transform your space to a beatiful oasis using our Garden Planner app now via Go
   * Coming feature offers reminders to water, plant, and fertilize via email. 
 
 ### Features
-- User login: create an account, view profile, and store information about their own garden, favorite plants, geographic region, saved search preferences, etc.
-- Search: users can look through available seeds/plants(using an API call) and filter the results (best price, retail locations, shade tolerance, soil type, watering needs, zone, color, type, organic, )
-- Seed price lookup: search seed prices
-- Garden layout templates: map out a garden with a layout tool or start with one of our templates for a forest of vegetables, flowers, and herbs
-- Tips widget: our tips make the difference ! (companion planting, succession planting, get rid of weeds, stop the pests)
-- Reminder emails: reminders to fertilize, water, plant, prune
+1.  User login: create an account, view profile, and store information about their own garden, favorite plants, geographic region, saved search preferences, etc.
+2.  Database/Search: users can look through available seeds/plants(using an API call) and filter the results (best price, retail locations, shade tolerance, soil type, watering needs, zone, color, type, organic, perennial, annual, growing cycles)
+3. Garden Tracking:
+4. Tips widget: our tips make the difference ! (companion planting, succession planting, get rid of weeds, stop the pests)
+5. Garden layout templates: map out a garden with a layout tool or start with one of our templates for a forest of vegetables, flowers, and herbs
+6. Seed price lookup: search seed prices
+7. Reminder emails: reminders to fertilize, water, plant, prune
 
 ### Technologies
 The Backend of the application will be using Java, Spring Boot, Hibernate, mySQL. The frontend of the application will be using Angular, TypeScript, CSS, and HTML.
