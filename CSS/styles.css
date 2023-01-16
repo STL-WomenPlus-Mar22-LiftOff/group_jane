@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 :root{
     --primary-color: #ffffff;
@@ -24,7 +25,7 @@ nav ul{
 }
 .garden{
     height: 100vh;
-    width: 100%;
+    max-width: 1300px;
     background:var(--primary-color);
     font-family: sans-serif;
     position: relative;
@@ -33,7 +34,6 @@ nav{
     width: 84%;
     margin:auto;
     padding: 20px 0;
-    display: flex;
     align-items: center;
     justify-content: space-between;    
 }
@@ -96,9 +96,16 @@ header{
     width: 45cm;
 }
 .new-tip-button{
-    background-color:ver(--quaternary-color) 
-    border-color: ver(var(--secondary-color)(21,0,255));
+    background-color:var(--quaternary-color);
+    border-color:var(--secondary-color);
 }
 #button:hover{
  background-color: ver(--senary-color)  
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background:var(--primary-color);
+    font-family: sans-serif;
+    position: relative;
 }
