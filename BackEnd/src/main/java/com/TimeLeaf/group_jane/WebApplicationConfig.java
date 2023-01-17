@@ -1,4 +1,6 @@
-package main.java.org.launchcode.TimeLeaf;
+package com.TimeLeaf.group_jane;
+
+import com.TimeLeaf.group_jane.AuthenticationFilter;
 
 @Configuration
 public class WebApplicationConfig implements WebMvcConfigurer {

@@ -2,6 +2,15 @@ package main.java.org.launchcode.TimeLeaf.controllers;
 
 //sample copied from tech-jobs studio #19.6 --> needs to be updated for our own home page
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.batch.BatchProperties;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
 import java.util.Optional;
 
 @Controller
@@ -19,7 +28,7 @@ import java.util.Optional;
 
         @GetMapping("add")
         public String displayAddJobForm(Model model) {
-            model.addAttribute(new Job());
+            model.addAttribute(new BatchProperties.Job());
             return "add";
         }
 

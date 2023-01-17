@@ -4,7 +4,10 @@ import main.java.org.launchcode.TimeLeaf.data.UserRepository;
 import main.java.org.launchcode.TimeLeaf.models.User;
 import main.java.org.launchcode.TimeLeaf.models.dto.LoginFormDTO;
 import main.java.org.launchcode.TimeLeaf.models.dto.RegisterFormDTO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
+import javax.servlet.http.HttpSession;
 import java.util.Optional;
 
 @Controller
