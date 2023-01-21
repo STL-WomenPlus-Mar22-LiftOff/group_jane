@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 public class Event extends AbstractEntity {
@@ -23,12 +21,12 @@ public class Event extends AbstractEntity {
     private EventDetails eventDetails;
 
     @ManyToOne
-    @NotNull(message = "Category is required")
-    private EventCategory eventCategory;
+    @NotNull(message = "Event Type is required")
+    private EventType eventType;
 
-    public Event(String label, EventCategory eventCategory) {
+    public Event(String label, EventType eventType) {
         this.label = label;
-        this.eventCategory = eventCategory;
+        this.eventType = eventType;
     }
 
     public Event() {}
@@ -41,12 +39,12 @@ public class Event extends AbstractEntity {
         this.label = label;
     }
 
-    public EventCategory getEventCategory() {
-        return eventCategory;
+    public EventType getEventCategory() {
+        return eventType;
     }
 
-    public void setEventCategory(EventCategory eventCategory) {
-        this.eventCategory = eventCategory;
+    public void setEventCategory(EventType eventCategory) {
+        this.eventType = eventCategory;
     }
 
     public EventDetails getEventDetails() {
