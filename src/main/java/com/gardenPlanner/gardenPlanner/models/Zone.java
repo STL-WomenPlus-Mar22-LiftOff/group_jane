@@ -1,4 +1,30 @@
 package com.gardenPlanner.gardenPlanner.models;
 
-public class Zone {
+public enum Zone {
+    ZONE1A,
+    ZONE1B,
+    ZONE2A,
+    ZONE2B,
+    ZONE3A,
+    ZONE3B,
+    ZONE4A,
+    ZONE4B,
+    ZONE5A,
+    ZONE5B,
+    ZONE6A,
+    ZONE6B,
+    ZONE7A,
+    ZONE7B,
+    ZONE8A,
+    ZONE8B,
+    ZONE9A,
+    ZONE9B,
+    ZONE10A,
+    ZONE10B,
+    ZONE11A,
+    ZONE11B,
+    ZONE12A,
+    ZONE12B,
+    ZONE13A,
+    ZONE13B
 }
