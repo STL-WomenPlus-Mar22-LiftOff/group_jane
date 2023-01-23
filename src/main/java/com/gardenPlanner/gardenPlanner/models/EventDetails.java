@@ -1,5 +1,7 @@
 package com.gardenPlanner.gardenPlanner.models;
 
+import com.gardenPlanner.gardenPlanner.models.dto.AbstractEntity;
+
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;

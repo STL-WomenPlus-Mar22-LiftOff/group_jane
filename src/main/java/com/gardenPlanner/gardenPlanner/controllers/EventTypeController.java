@@ -6,10 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -24,14 +21,14 @@ public class EventTypeController {
     public String displayAllCategories(Model model) {
         model.addAttribute("title", "All Categories");
         model.addAttribute("categories", eventTypeRepository.findAll());
-        return "eventCategories/index";
+        return "eventType/index";
     }
 
     @GetMapping("create")
     public String renderCreateEventCategoryForm(Model model) {
         model.addAttribute("title", "Create Category");
         model.addAttribute(new EventType());
-        return "eventCategories/create";
+        return "eventType/create";
     }
 
     @PostMapping("create")
@@ -39,13 +36,32 @@ public class EventTypeController {
                                                  Errors errors, Model model) {
 
         if (errors.hasErrors()) {
-            model.addAttribute("title", "Create Category");
+            model.addAttribute("title", "Create Event Type");
             model.addAttribute(new EventType());
-            return "eventCategories/create";
+            return "eventType/create";
         }
 
         eventTypeRepository.save(eventCategory);
         return "redirect:";
     }
 
+    @GetMapping("delete")
+    public String displayDeleteEventForm(Model model) {
+        model.addAttribute("title", "Delete Event Types");
+        model.addAttribute("events", eventTypeRepository.findAll());
+        return "eventType/delete";
+    }
+
+    @PostMapping("delete")
+    public String processDeleteEventsForm(@RequestParam(required = false) int[] eventIds) {
+
+        if (eventIds != null) {
+            for (int id : eventIds) {
+                eventTypeRepository.deleteById(id);
+            }
+        }
+
+        return "redirect:";
+
+    }
 }

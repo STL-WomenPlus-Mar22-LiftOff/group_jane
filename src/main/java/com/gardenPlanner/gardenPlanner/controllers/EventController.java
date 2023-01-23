@@ -4,6 +4,7 @@ import com.gardenPlanner.gardenPlanner.data.EventTypeRepository;
 import com.gardenPlanner.gardenPlanner.data.EventRepository;
 import com.gardenPlanner.gardenPlanner.models.Event;
 import com.gardenPlanner.gardenPlanner.models.EventType;
+import com.gardenPlanner.gardenPlanner.models.dto.EventDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -96,32 +97,6 @@ public class EventController {
         }
 
         return "events/detail";
-    }
-
-    // responds to /events/add-tag?eventId=13
-    @GetMapping("add-tag")
-    public String displayAddTagForm(@RequestParam Integer eventId, Model model){
-        Optional<Event> result = eventRepository.findById(eventId);
-        Event event = result.get();
-        model.addAttribute("title", "Add Tag to: " + event.getLabel());
-        EventDTO eventTag = new EventDTO();
-        eventTag.setEvent(event);
-        model.addAttribute("eventTag", eventTag);
-        return "events/add-tag.html";
-    }
-
-    @PostMapping("add-tag")
-    public String processAddTagForm(@ModelAttribute @Valid EventDTO eventDTO,
-                                    Errors errors,
-                                    Model model) {
-
-        Event event = null;
-        if (!errors.hasErrors()) {
-            event = eventDTO.getEvent();
-            eventRepository.save(event);
-        }
-        return "redirect:detail?eventId=" + event.getId();
-
     }
 
 }
