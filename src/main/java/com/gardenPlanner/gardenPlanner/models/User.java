@@ -1,11 +1,11 @@
 package com.gardenPlanner.gardenPlanner.models;
 
+import com.gardenPlanner.gardenPlanner.models.dto.AbstractEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
-import com.gardenPlanner.gardenPlanner.models.dto.AbstractEntity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Entity
 public class User extends AbstractEntity {
