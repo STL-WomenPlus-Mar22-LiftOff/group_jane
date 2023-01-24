@@ -2,6 +2,7 @@ package com.gardenPlanner.gardenPlanner;
 
 import com.gardenPlanner.gardenPlanner.controllers.AuthenticationController;
 import com.gardenPlanner.gardenPlanner.data.UserRepository;
+import com.gardenPlanner.gardenPlanner.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 

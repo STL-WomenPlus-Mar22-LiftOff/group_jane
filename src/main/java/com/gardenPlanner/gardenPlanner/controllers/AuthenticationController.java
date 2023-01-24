@@ -1,6 +1,9 @@
 package com.gardenPlanner.gardenPlanner.controllers;
 
 import com.gardenPlanner.gardenPlanner.data.UserRepository;
+import com.gardenPlanner.gardenPlanner.models.User;
+import com.gardenPlanner.gardenPlanner.models.dto.LoginFormDTO;
+import com.gardenPlanner.gardenPlanner.models.dto.RegisterFormDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

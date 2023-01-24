@@ -1,6 +1,11 @@
 package com.gardenPlanner.gardenPlanner.models;
 
-import javax.persistence.*;
+import com.gardenPlanner.gardenPlanner.models.dto.AbstractEntity;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -53,7 +58,7 @@ public class Event extends AbstractEntity {
         this.eventDetails = eventDetails;
     }
 
-    @Override
+    //@Override
     public String toString() {
         return label;
     }

@@ -1,9 +1,10 @@
 package com.gardenPlanner.gardenPlanner.controllers;
 
-import com.gardenPlanner.gardenPlanner.data.EventTypeRepository;
 import com.gardenPlanner.gardenPlanner.data.EventRepository;
+import com.gardenPlanner.gardenPlanner.data.EventTypeRepository;
 import com.gardenPlanner.gardenPlanner.models.Event;
 import com.gardenPlanner.gardenPlanner.models.EventType;
+import com.gardenPlanner.gardenPlanner.models.dto.EventDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
