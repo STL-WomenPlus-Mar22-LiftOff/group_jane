@@ -18,6 +18,7 @@ import javax.validation.Valid;
 import java.util.Optional;
 
 //This code was worked on by Adriana Darris
+// Authentication Controller is currently the place for login, logout, register
 
 @Controller
 public class AuthenticationController {
