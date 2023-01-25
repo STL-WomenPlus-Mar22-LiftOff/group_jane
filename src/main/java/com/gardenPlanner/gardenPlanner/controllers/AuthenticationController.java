@@ -93,7 +93,7 @@ public class AuthenticationController {
         return "users/login";
     }
 
-    @PostMapping("/users/login")
+    @PostMapping("users/login")
     public String processLoginForm(@ModelAttribute @Valid LoginFormDTO loginFormDTO,
                                    Errors errors, HttpServletRequest request,
                                    Model model) {

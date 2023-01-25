@@ -1,29 +1,24 @@
 package com.gardenPlanner.gardenPlanner.controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import java.util.List;
 
 @Controller
-@RequestMapping("search")
+@RequestMapping("search/plantsearch")
 public class SearchController {
 
-    public SearchController() {
-    }
+//    public SearchController() {
+//    }
 
     @GetMapping("")
-    public String search(Model model) {
-//        model.addAttribute("columns", columnChoices);
-        return "search";
+    public String search() {
+
+        return "search/plantsearch";
     }
 
-    @PostMapping("results")
-    public String displaySearchResults(Model model, @RequestParam String searchTerm, @RequestParam String searchType) {
+//    @PostMapping("/search/plant-search/results")
+//    public String displaySearchResults(Model model, @RequestParam String searchTerm, @RequestParam String searchType) {
 //        List<Job> jobs;
 //
 //        if (searchTerm.equals("") || searchTerm.toLowerCase().equals("all")) {
@@ -38,7 +33,7 @@ public class SearchController {
 //        model.addAttribute("jobs", jobs);
 //        model.addAttribute("columns", columnChoices);
 
-        return "results";
-    }
+//        return "/search/plant-search/results";
+//    }
 
 }
