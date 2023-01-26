@@ -2,9 +2,21 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Event Details</title>
 </head>
 <body>
-event detail page coming soon!
+<header th:replace="fragments :: eventNav"></header>
+
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <td th:text="${event.id}"></td>
+    </tr>
+    <tr>
+        <th>Description</th>
+        <td th:text="${event.eventDetails.description}"></td>
+    </tr>
+</table>
+
 </body>
 </html>

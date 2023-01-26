@@ -42,12 +42,12 @@ public class Event extends AbstractEntity {
         this.label = label;
     }
 
-    public EventType getEventCategory() {
+    public EventType getEventType() {
         return eventType;
     }
 
-    public void setEventCategory(EventType eventCategory) {
-        this.eventType = eventCategory;
+    public void setEventCategory(EventType eventType) {
+        this.eventType = eventType;
     }
 
     public EventDetails getEventDetails() {
@@ -58,7 +58,7 @@ public class Event extends AbstractEntity {
         this.eventDetails = eventDetails;
     }
 
-    //@Override
+    @Override
     public String toString() {
         return label;
     }

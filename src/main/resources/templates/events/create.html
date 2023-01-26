@@ -6,6 +6,8 @@
 </head>
 <body>
 
+<header th:replace="fragments :: eventNav"></header>
+
 <form method="post">
     <div class="form-group">
         <label>Event Label
@@ -20,10 +22,10 @@
         <p class="error" th:errors="${event.eventDetails.description}"></p>
     </div>
     <div class="form-group">
-        <label>Category
-            <select th:field="${event.eventTypes}">
+        <label>Type
+            <select th:field="${event.eventType}">
                 <option th:each="eventType : ${types}"
-                        th:value="${eventTypes.id}"
+                        th:value="${eventType.id}"
                         th:text="${eventType.name}"
                 ></option>
             </select>

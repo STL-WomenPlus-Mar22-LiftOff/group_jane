@@ -5,6 +5,17 @@
     <title>Title</title>
 </head>
 <body>
-Events page coming soon!
+<header th:replace="fragments :: eventNav"></header>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Event Label</th>
+    </tr>
+    </thead>
+    <tr th:each="event : ${events}">
+        <td><a th:href="'/events/detail?eventId=' + ${event.id}" th:text="${event.label}"></a></td>
+    </tr>
+</table>
 </body>
 </html>
