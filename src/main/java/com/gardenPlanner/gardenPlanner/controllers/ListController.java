@@ -13,6 +13,19 @@ import java.util.HashMap;
 @RequestMapping(value = "list")
 public class ListController {
 
+//    @Controller
+//    @RequestMapping("list/plantlist")
+//    public class ListController {
+//
+////    public SearchController() {
+////    }
+//
+//        @GetMapping("")
+//        public String search() {
+//
+//            return "list/plantlist";
+//        }
+
     static HashMap<String, String> columnChoices = new HashMap<>();
     static HashMap<String, Object> tableChoices = new HashMap<>();
 
