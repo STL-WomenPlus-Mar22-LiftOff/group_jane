@@ -2,11 +2,38 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Create an Event!</title>
 </head>
 <body>
 
-Create an event page coming soon!
+<form method="post">
+    <div class="form-group">
+        <label>Event Label
+            <input th:field="${event.label}" class="form-control">
+        </label>
+        <p class="error" th:errors="${event.label}"></p>
+    </div>
+    <div class="form-group">
+        <label>Description
+            <input th:field="${event.eventDetails.description}" class="form-control">
+        </label>
+        <p class="error" th:errors="${event.eventDetails.description}"></p>
+    </div>
+    <div class="form-group">
+        <label>Category
+            <select th:field="${event.eventTypes}">
+                <option th:each="eventType : ${types}"
+                        th:value="${eventTypes.id}"
+                        th:text="${eventType.name}"
+                ></option>
+            </select>
+            <p class="error" th:errors="${event.eventType}"></p>
+        </label>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-success">
+    </div>
+</form>
 
 </body>
 </html>
