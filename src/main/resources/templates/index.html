@@ -2,30 +2,32 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Timeleaf Garden Planner Website</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="resources/static/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div class="garden">
     <nav>
-        <img src="images/logo.jpg" class="logo">
+        <img src="logo.jpg" class="logo">
         <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="plant-search.html">SEARCH</a></li>
-            <li><a href="search/plant-list.html">PLANTS</a></li>
-            <li><a href="templates/garden/my-garden.html">MY GARDEN AREA</a></li>
-            <li><a href="calendar">CALENDAR</a></li>
-            <li><a href="resources/templates/users/my-account.html">MY ACCOUNT</a></li>
+            <li><a href="">HOME</a></li>
+            <li><a href="/search/plantsearch">SEARCH</a></li>
+<!--            <li><a href="/search/plantlist">PLANTS</a></li>-->
+            <li><a href="/garden/mygarden">MY GARDEN AREA</a></li>
+            <li><a href="/calendar">CALENDAR</a></li>
+<!--            Maybe we can make my account only available once you're logged in? -->
+<!--            <li><a href="/users/myaccount">MY ACCOUNT</a></li>-->
+            <li><a href="/users/login">LOGIN/REGISTER</a></li>
         </ul>
-        <img src="images/moon.png" id="icon">
+        <img src="moon.png" id="icon">
     </nav>
     <div class="about">
         <h1>Welcome to the  <span>TimeLeaf</span>  Garden Planner</h1>
         <p>Need help planning your next harvest or floral garden oasis? The TimeLeaf
             garden planner is here to help!
         </p>
-        <a href="templates/garden/my-garden.html">Start Planning Here!</a>
+        <a href="/garden/mygarden">Start Planning Here!</a>
     </div>
 
 </div>
@@ -44,15 +46,15 @@
 </main>
 </div>
 </div>
-<script src="app.js"></script>
+<script src="script.js"></script>
 <script>
     var icon = document.getElementById("icon");
     icon.onclick = function(){
         document.body.classList.toggle("dark-theme");
         if(document.body.classList.contains("dark-theme")){
-            icon.src = "images/sun.jpg";
+            icon.src = "sun.jpg";
         }else{
-            icon.src = "images/moon.png";
+            icon.src = "moon.png";
         }
     }
 </script>

@@ -1,7 +1,7 @@
 package com.gardenPlanner.gardenPlanner.controllers;
 
-import com.gardenPlanner.gardenPlanner.data.EventTypeRepository;
 import com.gardenPlanner.gardenPlanner.data.EventRepository;
+import com.gardenPlanner.gardenPlanner.data.EventTypeRepository;
 import com.gardenPlanner.gardenPlanner.models.Event;
 import com.gardenPlanner.gardenPlanner.models.EventType;
 import com.gardenPlanner.gardenPlanner.models.dto.EventDTO;

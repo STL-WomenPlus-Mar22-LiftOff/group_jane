@@ -1,16 +1,17 @@
 package com.gardenPlanner.gardenPlanner.controllers;
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("garden/mygarden")
-public class GardenAreaController {
+@RequestMapping("calendar")
+public class CalendarController {
 
     @GetMapping("")
-    public String loadMyGarden() {
+    public String loadCalendar() {
 
-        return "garden/mygarden";
+        return "calendar";
     }
 }
