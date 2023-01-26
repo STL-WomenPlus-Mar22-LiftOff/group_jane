@@ -22,6 +22,24 @@
         <p class="error" th:errors="${event.eventDetails.description}"></p>
     </div>
     <div class="form-group">
+        <label>Month
+            <input th:field="${event.eventDetails.month}" class="form-control">
+        </label>
+        <p class="error" th:errors="${event.eventDetails.month}"></p>
+    </div>
+    <div class="form-group">
+        <label>Day
+            <input th:field="${event.eventDetails.day}" class="form-control">
+        </label>
+        <p class="error" th:errors="${event.eventDetails.day}"></p>
+    </div>
+    <div class="form-group">
+        <label>Year
+            <input th:field="${event.eventDetails.year}" class="form-control">
+        </label>
+        <p class="error" th:errors="${event.eventDetails.year}"></p>
+    </div>
+    <div class="form-group">
         <label>Type
             <select th:field="${event.eventType}">
                 <option th:each="eventType : ${types}"
