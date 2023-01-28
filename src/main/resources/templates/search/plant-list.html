@@ -4,7 +4,40 @@
     <meta charset="UTF-8">
     <title>Plant list page in progress</title>
 </head>
+</html>
+
 <body>
+<div th:replace="fragments :: page-header"></div>
+
+<div class="container body-content">
+    <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
+    <h2 class = "centered">View Plants By Category</h2>
+</div>
+
+<table class="centeredTable">
+    <tr>
+        <th>All</th>
+        <th>Flower Color</th>
+        <th>Plant Type</th>
+    </tr>
+
+    <tr>
+        <td>
+            <li>
+                <a th:href="@{/list/plants(column='All',value='View All')}">View All</a>
+            </li>
+        </td>
+        <td>
+            <li th:each="flowerColor : ${flowerColors}">
+                <a th:href="@{/list/plants(column=flowerColor,value=${flowerColor.name})}" th:text="${flowerColor.name}"></a>
+            </li>
+        </td>
+        <td>
+            <li th:each="plantType : ${plantTypes}">
+                <a th:href="@{/list/plants(column=plantType,value=${plantType.name})}" th:text="${plantType.name}"></a>
+            </li>
+        </td>
+    </tr>
+</table>
 
 </body>
-</html>
