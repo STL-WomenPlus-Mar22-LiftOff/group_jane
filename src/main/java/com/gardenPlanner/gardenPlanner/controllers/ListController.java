@@ -6,25 +6,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 @Controller
-@RequestMapping(value = "list")
+@RequestMapping(value = "list/plantlist")
 public class ListController {
 
-//    @Controller
-//    @RequestMapping("list/plantlist")
-//    public class ListController {
-//
-////    public SearchController() {
-////    }
-//
-//        @GetMapping("")
-//        public String search() {
-//
-//            return "list/plantlist";
-//        }
+
+    @GetMapping("")
+    public String list(){
+        return "list/plantlist";
+    }
 
     static HashMap<String, String> columnChoices = new HashMap<>();
     static HashMap<String, Object> tableChoices = new HashMap<>();
@@ -43,8 +35,8 @@ public class ListController {
 //        tableChoices.put("coreCompetency", JobData.getAllCoreCompetency());
     }
 
-    @GetMapping(value = "")
-    public String list(Model model) {
+//    @GetMapping(value = "")
+//    public String list(Model model) {
 //        model.addAttribute("columns", columnChoices);
 //        model.addAttribute("tableChoices", tableChoices);
 //        model.addAttribute("employers", JobData.getAllEmployers());
@@ -53,8 +45,8 @@ public class ListController {
 //        model.addAttribute("skills", JobData.getAllCoreCompetency());
 //        model.addAttribute("all", JobData.findAll());
 //
-        return "list";
-    }
+//        return "list";
+//    }
 
     @GetMapping(value = "jobs")
     public String listJobsByColumnAndValue(Model model, @RequestParam String column, @RequestParam(required = false) String value) {

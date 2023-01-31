@@ -9,10 +9,10 @@
 <body>
 <div class="garden">
     <nav>
-        <img src="logo.jpg" class="logo">
+        <img src="images/logo.jpg" class="logo">
         <ul>
             <li><a href="">HOME</a></li>
-            <li><a href="/search/plantsearch">SEARCH</a></li>
+            <li><a href="/list/plantlist">SEARCH</a></li>
 <!--            <li><a href="/search/plantlist">PLANTS</a></li>-->
             <li><a href="/garden/mygarden">MY GARDEN AREA</a></li>
             <li><a href="/calendar">CALENDAR</a></li>
@@ -20,7 +20,7 @@
 <!--            <li><a href="/users/myaccount">MY ACCOUNT</a></li>-->
             <li><a href="/users/login">LOGIN/REGISTER</a></li>
         </ul>
-        <img src="moon.png" id="icon">
+        <img src="images/moon.png" id="icon">
     </nav>
     <div class="about">
         <h1>Welcome to the  <span>TimeLeaf</span>  Garden Planner</h1>
@@ -52,9 +52,9 @@
     icon.onclick = function(){
         document.body.classList.toggle("dark-theme");
         if(document.body.classList.contains("dark-theme")){
-            icon.src = "sun.jpg";
+            icon.src = "images/sun.jpg";
         }else{
-            icon.src = "moon.png";
+            icon.src = "images/moon.png";
         }
     }
 </script>
