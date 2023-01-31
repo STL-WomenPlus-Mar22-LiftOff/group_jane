@@ -25,7 +25,7 @@ public class EventController {
         @GetMapping
         public String displayAllEvents(Model model) {
             model.addAttribute("title", "All Events");
-            model.addAttribute("events", EventData.getAll());
+            model.addAttribute("events", eventRepository.findAll());
             return "events/index";
         }
 
@@ -46,6 +46,7 @@ public class EventController {
         }
 
         EventData.add(newEvent);
+        eventRepository.save(newEvent);
         return "redirect:";
     }
 
