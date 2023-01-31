@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Details</title>
+</head>
+<body>
+<header th:replace="fragments :: eventNav"></header>
+
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <td th:text="${event.id}"></td>
+    </tr>
+    <tr>
+        <th>Event Type</th>
+        <td th:text="${event.eventDetails.type}"></td>
+    </tr>
+    <tr>
+        <th>Date</th>
+        <td th:text="${event.eventDetails.date}"></td>
+    </tr>
+    <tr>
+        <th>Description</th>
+        <td th:text="${event.eventDetails.description}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
