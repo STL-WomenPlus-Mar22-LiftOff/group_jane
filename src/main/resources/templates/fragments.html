@@ -50,6 +50,30 @@
     </nav>
 </div>
 
+<div th:fragment="head2">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</div>
+
+<div th:fragment="navbar2">
+    <nav>
+        <img src="../images/logo.jpg" class="logo">
+        <ul>
+            <li><a href="../">HOME</a></li>
+            <li><a href="../list/plantlist">LIST</a></li>
+            <li><a href="../garden/mygarden">MY GARDEN AREA</a></li>
+            <li><a href="../events">CALENDAR</a></li>
+            <!--            Maybe we can make my account only available once you're logged in? -->
+            <li><a href="../users/myaccount">MY ACCOUNT</a></li>
+            <li><a href="../users/login">LOGIN/REGISTER</a></li>
+            <li> <img src="../images/moon.png" id="icon2"></li>
+        </ul>
+    </nav>
+</div>
+
 </div>
 
 <script th:fragment = "script">

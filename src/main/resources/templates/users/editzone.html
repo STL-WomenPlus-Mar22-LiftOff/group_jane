@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head th:replace="fragments :: head">
-    <div class="d-flex flex-row bd-highlight mb-3">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-        <title >My First Web Page!</title>
-    </div>
+<head>
+<div th:replace="fragments:: head2"></div>
 </head>
-<body class="container  body-content" background="c:/users/vijay/garden.jpg">
+<body class="garden">
+<div th:replace="fragments:: navbar2"></div>
 <h1> Zone Information</h1>
 
 <nav th:replace="fragments :: page-header"></nav>

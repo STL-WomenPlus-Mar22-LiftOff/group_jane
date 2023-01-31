@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <div th:replace="fragments:: head2"></div>
 </head>
-<body class = "container">
+<body class = "garden">
+<div th:replace="fragments:: navbar2"></div>
 <form method="post">
     <h1>Login</h1>
     <div class="form-group">

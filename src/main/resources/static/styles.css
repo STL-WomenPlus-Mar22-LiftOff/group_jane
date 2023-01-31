@@ -99,6 +99,10 @@ html {
     width: 25px;
     cursor: pointer;
 }
+#icon2 {
+    width: 25px;
+    cursor: pointer;
+}
 nav ul{
     flex: 1;
     text-align: right;
