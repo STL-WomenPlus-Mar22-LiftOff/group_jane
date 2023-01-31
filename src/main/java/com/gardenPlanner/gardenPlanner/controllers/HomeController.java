@@ -14,7 +14,7 @@ public class HomeController {
 
     @GetMapping(value = "")
     public String index() {
-        return "home";
+        return "index";
     }
 
 }
