@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("users/myaccount")
 public class MyAccountController {
 
-    @GetMapping("")
+    @GetMapping(value = "")
     public String loadMyAccount(){
+
         return "users/myaccount";
     }
 }
