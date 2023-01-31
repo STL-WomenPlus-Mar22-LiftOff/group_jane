@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+    <body>
+        <div th:fragment="navbar">
+            <nav>
+                <img src="/images/logo.jpg" class="logo">
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="/search/plantsearch">SEARCH</a></li>
+                        <!--            <li><a href="/search/plantlist">PLANTS</a></li>-->
+                        <li><a href="/garden/mygarden">MY GARDEN AREA</a></li>
+                        <li><a href="/calendar">CALENDAR</a></li>
+                        <!--            Maybe we can make my account only available once you're logged in? -->
+                                    <li><a href="/users/myaccount">MY ACCOUNT</a></li>
+                        <li><a href="/users/login">LOGIN/REGISTER</a></li>
+                        <li> <img src="/images/moon.png" id="icon"></li>
+                    </ul>
+            </nav>
+        </div>
+
+        </div>
+    </body>
+</html>
