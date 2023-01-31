@@ -3,11 +3,15 @@ package com.gardenPlanner.gardenPlanner.models;
 import com.gardenPlanner.gardenPlanner.models.dto.AbstractEntity;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
 public class EventDetails extends AbstractEntity {
+
+    @OneToOne(mappedBy = "eventDetails")
+    private Event event;
 
     @NotBlank (message = "Description is required!")
     @Size(max = 500, message = "Description too long!")
@@ -27,12 +31,15 @@ public class EventDetails extends AbstractEntity {
 
     private String date;
 
-    public EventDetails(@Size(max = 500, message = "Description too long!")String description, @Size(min = 3, max = 9, message = "Month must be between 3 and 9 characters long!") String month, @Size (min = 1, max = 3, message = "Day must be between 1 and 3 characters!")String day, @Size (min = 4, max = 4, message = "Year must be 4 characters long!")String year) {
+    private EventType type;
+
+    public EventDetails(@Size(max = 500, message = "Description too long!")String description, @Size(min = 3, max = 9, message = "Month must be between 3 and 9 characters long!") String month, @Size (min = 1, max = 3, message = "Day must be between 1 and 3 characters!")String day, @Size (min = 4, max = 4, message = "Year must be 4 characters long!")String year, EventType eventTypeEnum) {
         this.description = description;
         this.month = month;
         this.day = day;
         this.year = year;
         this.date = month + " " + day + ", " + year;
+        this.type = eventTypeEnum;
     }
 
     public EventDetails() {}
@@ -75,5 +82,13 @@ public class EventDetails extends AbstractEntity {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public EventType getType() {
+        return type;
+    }
+
+    public void setType(EventType type) {
+        this.type = type;
     }
 }

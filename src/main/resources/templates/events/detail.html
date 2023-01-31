@@ -13,6 +13,14 @@
         <td th:text="${event.id}"></td>
     </tr>
     <tr>
+        <th>Event Type</th>
+        <td th:text="${event.eventDetails.type}"></td>
+    </tr>
+    <tr>
+        <th>Date</th>
+        <td th:text="${event.eventDetails.date}"></td>
+    </tr>
+    <tr>
         <th>Description</th>
         <td th:text="${event.eventDetails.description}"></td>
     </tr>

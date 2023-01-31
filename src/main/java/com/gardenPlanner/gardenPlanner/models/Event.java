@@ -23,13 +23,8 @@ public class Event extends AbstractEntity {
     @NotNull
     private EventDetails eventDetails;
 
-    @ManyToOne
-    @NotNull(message = "Event Type is required")
-    private EventType eventType;
-
-    public Event(String label, EventType eventType) {
+    public Event(String label) {
         this.label = label;
-        this.eventType = eventType;
     }
 
     public Event() {}
@@ -40,14 +35,6 @@ public class Event extends AbstractEntity {
 
     public void setLabel(String label) {
         this.label = label;
-    }
-
-    public EventType getEventType() {
-        return eventType;
-    }
-
-    public void setEventCategory(EventType eventType) {
-        this.eventType = eventType;
     }
 
     public EventDetails getEventDetails() {
