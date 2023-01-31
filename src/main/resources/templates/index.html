@@ -1,27 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
-    <meta charset="UTF-8">
-    <title>Timeleaf Garden Planner Website</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <div th:replace="fragments:: head"></div>
+    <title>TimeLeaf Garden App</title>
 </head>
 <body>
 <div class="garden">
-    <nav>
-        <img src="images/logo.jpg" class="logo">
-        <ul>
-            <li><a href="">HOME</a></li>
-            <li><a href="/list/plantlist">SEARCH</a></li>
-<!--            <li><a href="/search/plantlist">PLANTS</a></li>-->
-            <li><a href="/garden/mygarden">MY GARDEN AREA</a></li>
-            <li><a href="/events">CALENDAR</a></li>
-<!--            Maybe we can make my account only available once you're logged in? -->
-<!--            <li><a href="/users/myaccount">MY ACCOUNT</a></li>-->
-            <li><a href="/users/login">LOGIN/REGISTER</a></li>
-        </ul>
-        <img src="images/moon.png" id="icon">
-    </nav>
+<div th:replace="fragments:: navbar"></div>
     <div class="about">
         <h1>Welcome to the  <span>TimeLeaf</span>  Garden Planner</h1>
         <p>Need help planning your next harvest or floral garden oasis? The TimeLeaf
@@ -30,33 +15,8 @@
         <a href="/garden/mygarden">Start Planning Here!</a>
     </div>
 
+    <div th:replace="fragments:: footer"></div>
 </div>
-<div class="container">
-    <div class="row flex-top justify-content-center">
-        <header class="border shadow">
-            <h1>Garden Tips</h1>
-        </header>
-    </div>
-    <div class="row flex-top justify-content-center">
-        <button id="button" class="btn-large new-tip-button" onClick="getTip()">NewTip</button>
-    </div>
-<div class="row justify-content-center">
-<main class="card">
-    <p class="quote card-body center" id="newTipSection">...</p>
-</main>
-</div>
-</div>
-<script src="script.js"></script>
-<script>
-    var icon = document.getElementById("icon");
-    icon.onclick = function(){
-        document.body.classList.toggle("dark-theme");
-        if(document.body.classList.contains("dark-theme")){
-            icon.src = "images/sun.jpg";
-        }else{
-            icon.src = "images/moon.png";
-        }
-    }
-</script>
+<script th:replace="fragments:: script"></script>
 </body>
 </html>
