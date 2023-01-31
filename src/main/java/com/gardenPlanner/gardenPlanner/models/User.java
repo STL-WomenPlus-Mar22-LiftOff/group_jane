@@ -5,7 +5,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 @Entity
 public class User extends AbstractEntity {
@@ -13,13 +12,13 @@ public class User extends AbstractEntity {
     @NotNull
     private String username;
 
-    @NotNull
-    @Size(min = 6, max = 6)
-    private String zipcode;
+//    @NotNull
+//    @Size(min = 6, max = 6)
+//    private String zipcode;
 
-    @NotNull
-    @Size(min = 2, max = 3)
-    private String Zone;
+//    @NotNull
+//    @Size(min = 2, max = 3)
+//    private String Zone;
 
     @NotNull
     private String pwHash;
