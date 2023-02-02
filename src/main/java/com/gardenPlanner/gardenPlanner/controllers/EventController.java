@@ -6,6 +6,7 @@ import com.gardenPlanner.gardenPlanner.models.Event;
 //import com.gardenPlanner.gardenPlanner.models.EventType;
 //import com.gardenPlanner.gardenPlanner.models.dto.EventDTO;
 import com.gardenPlanner.gardenPlanner.models.EventType;
+import com.gardenPlanner.gardenPlanner.models.dto.EventDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -84,5 +85,28 @@ public class EventController {
 
         return "events/detail";
     }
+
+//    @GetMapping("edit")
+//    public String displayEditEventForm(@RequestParam Integer eventId, Model model){
+//        Optional<Event> result = eventRepository.findById(eventId);
+//        Event event = result.get();
+//        model.addAttribute("title", "Edit: " + event.getLabel());
+//        EventDTO eventDTO = new EventDTO();
+//        eventDTO.setEvent(event);
+//        model.addAttribute("eventDTO", eventDTO);
+//        return "events/edit";
+//    }
+//
+//    @PostMapping("edit")
+//    public String processEditEventForm(@ModelAttribute @Valid EventDTO eventDTO,
+//                                    Errors errors,
+//                                    Model model){
+//
+//        if (!errors.hasErrors()) {
+//            Event event = eventDTO.getEvent();
+//                eventRepository.save(event);
+//            }
+//            return "redirect:detail?eventId=" + eventDTO.getEvent().getId();
+//    }
 
 }
