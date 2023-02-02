@@ -1,15 +1,22 @@
 package com.gardenPlanner.gardenPlanner.models;
 
-import javax.persistence.CascadeType;
-import javax.persistence.OneToOne;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.gardenPlanner.gardenPlanner.models.dto.AbstractEntity;
 
-public class Plant {
+import javax.persistence.Entity;
+import javax.validation.constraints.NotBlank;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @Valid
-    @NotNull
-    private Seed seed;
+@Entity
+public class Plant extends AbstractEntity {
+
+    @NotBlank(message = "Field cannot be blank")
+    private String flowerColor;
+
+    @NotBlank(message = "Field cannot be blank")
+    private String plantType;
+
+    @NotBlank(message = "Field cannot be blank")
+    private String commonName;
+
+
 
 }
