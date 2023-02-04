@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <div th:replace="fragments:: innerHead"></div>
+</head>
+<body>
+<div class="garden">
+<header th:replace="fragments :: listNavBar"></header>
+<header th:replace="fragments :: listNav"></header>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Plants</th>
+    </tr>
+    </thead>
+    <tr th:each="plant : ${plants}">
+        <td><a th:href="'/list/detail?plantId=' + ${plant.id}" th:text="${plant.commonName}"></a></td>
+    </tr>
+</table>
+</div>
+</body>
+</html>

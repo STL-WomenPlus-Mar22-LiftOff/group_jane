@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <div th:replace="fragments:: innerHead"></div>
 </head>
-<body class = "container">
+<body>
+<div class="garden">
+    <div th:replace="fragments:: userNavbar"></div>
 <form method="post">
     <h1>Login</h1>
     <div class="form-group">
@@ -28,5 +26,6 @@
 <br>
 
 <p>Don't have an account? <a href="/users/register">Register for one.</a></p>
+</div>
 </body>
 </html>

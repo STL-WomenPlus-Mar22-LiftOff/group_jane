@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="garden">
+<header th:replace="fragments :: listNavBar"></header>
+<header th:replace="fragments :: listNav"></header>
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <td th:text="${plant.id}"></td>
+    </tr>
+    <tr>
+        <th>Scientific Name</th>
+        <td th:text="${plant.plantDetails.scientificName}"></td>
+    </tr>
+    <tr>
+        <th>Plant Type</th>
+        <td th:text="${plant.plantDetails.plantType}"></td>
+    </tr>
+    <tr>
+        <th>Flower Colors</th>
+        <td th:text="${plant.plantDetails.flowerColors}"></td>
+    </tr>
+    <tr>
+        <th>Edible</th>
+        <td th:text="${plant.plantDetails.isEdible}"></td>
+    </tr>
+    <tr>
+        <th>Water Tolerance</th>
+        <td th:text="${plant.plantDetails.waterTolerance}"></td>
+    </tr>
+    <tr>
+        <th>Shade Tolerance</th>
+        <td th:text="${plant.plantDetails.shadeTolerance}"></td>
+    </tr>
+    <tr>
+        <th>Ph Range</th>
+        <td th:text="${plant.plantDetails.phRange}"></td>
+    </tr>
+    <tr>
+        <th>Description</th>
+        <td th:text="${plant.plantDetails.description}"></td>
+    </tr>
+</table>
+</div>
+</body>
+</html>
