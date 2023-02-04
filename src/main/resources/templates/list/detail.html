@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <div th:replace="fragments :: innerHead"></div>
 </head>
 <body>
 <div class="garden">
-<header th:replace="fragments :: listNavBar"></header>
-<header th:replace="fragments :: listNav"></header>
+    <header th:replace="fragments :: listNavBar"></header>
+    <header th:replace="fragments :: listNav"></header>
 <table class="table table-striped">
     <tr>
         <th>ID</th>
@@ -46,6 +45,9 @@
         <td th:text="${plant.plantDetails.description}"></td>
     </tr>
 </table>
+    <div th:replace="fragments:: footer"></div>
 </div>
+
+<script th:replace="fragments:: script"></script>
 </body>
 </html>

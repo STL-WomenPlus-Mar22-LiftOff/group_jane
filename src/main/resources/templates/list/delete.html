@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <div th:replace="fragments :: innerHead"></div>
 </head>
 <body>
 <div class="garden">
@@ -22,6 +21,9 @@
 
     <input type="submit" value="Delete" class="btn btn-danger">
 </form>
+    <div th:replace="fragments:: footer"></div>
 </div>
+
+<script th:replace="fragments:: script"></script>
 </body>
 </html>

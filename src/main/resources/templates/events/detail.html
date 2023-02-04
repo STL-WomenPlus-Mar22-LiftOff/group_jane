@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
-    <div th:replace="fragments:: head"></div>
+    <div th:replace="fragments:: innerHead"></div>
 </head>
 <body>
+<div class="garden">
 <header th:replace="fragments :: eventNavBar"></header>
 <header th:replace="fragments :: eventNav"></header>
 
@@ -25,6 +26,9 @@
         <td th:text="${event.eventDetails.description}"></td>
     </tr>
 </table>
+    <div th:replace="fragments:: footer"></div>
+</div>
 
+<script th:replace="fragments:: script"></script>
 </body>
 </html>

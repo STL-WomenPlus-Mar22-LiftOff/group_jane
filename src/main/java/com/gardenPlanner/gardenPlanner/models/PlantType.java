@@ -2,6 +2,7 @@ package com.gardenPlanner.gardenPlanner.models;
 
 public enum PlantType {
     VEGETABLE ("Vegetable"),
+    FRUIT("Fruit"),
     FLOWER ("Flower"),
     TREE ("Tree"),
     SHRUB ("Shrub"),

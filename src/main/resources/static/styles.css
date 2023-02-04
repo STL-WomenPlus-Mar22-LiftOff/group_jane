@@ -144,6 +144,19 @@ nav ul{
 navbar{
     height:60vh;
 }
+listNavbar{
+    height:60vh;
+}
+eventNavbar{
+    height:60vh;
+}
+gardenNavbar{
+    height:60vh;
+}
+userNavbar{
+    height:60vh;
+}
+
 nav{
     width: 84%;
     margin:auto;
