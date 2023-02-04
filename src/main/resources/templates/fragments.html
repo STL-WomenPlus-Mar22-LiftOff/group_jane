@@ -131,15 +131,69 @@
 </div>
 
 <script th:fragment = "script">
-    var icon = document.getElementById("icon");
-    icon.onclick = function(){
-        document.body.classList.toggle("dark-theme");
-        if(document.body.classList.contains("dark-theme")){
+
+        var icon = document.getElementById("icon");
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
             icon.src = "/images/sun.jpg";
-        }else{
+            }else{
             icon.src = "/images/moon.png";
         }
-    }
+}
+</script>
+
+<script th:fragment = "listScript">
+
+        var icon2 = document.getElementById("icon2");
+        icon2.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+            icon2.src = "../images/sun.jpg";
+            }else{
+            icon2.src = "../images/moon.png";
+        }
+}
+</script>
+
+<script th:fragment = "eventScript">
+
+        var icon3 = document.getElementById("icon3");
+        icon3.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+            icon3.src = "../images/sun.jpg";
+            }else{
+            icon3.src = "../images/moon.png";
+        }
+}
+</script>
+
+<script th:fragment = "gardenScript">
+
+        var icon4 = document.getElementById("icon4");
+        icon4.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+            icon4.src = "../images/sun.jpg";
+            }else{
+            icon4.src = "../images/moon.png";
+        }
+}
+</script>
+
+<script th:fragment = "userScript">
+
+        var icon5 = document.getElementById("icon5");
+
+        icon5.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+            icon5.src = "../images/sun.jpg";
+            }else{
+            icon5.src = "../images/moon.png";
+        }
+}
 </script>
 
 </body>
