@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
-    <div th:replace="fragments/head:: head"></div>
+    <div th:replace="fragments:: head2"></div>
     <!--    <title th:text="{$title}">TimeLeaf Garden App</title>-->
     <title>TimeLeaf Garden App | My Account </title>
 </head>
 <body>
 <div class="garden">
-    <div th:replace="fragments/nav:: navbar"></div>
+    <div th:replace="fragments:: navbar"></div>
     <div class="about">
         <h1>Welcome to your <span>Garden Profile</span>!</h1>
 <!--        <p>Need help planning your next harvest or floral garden oasis? The TimeLeaf-->
@@ -16,8 +16,8 @@
 <!--        <a href="/garden/mygarden">Start Planning Here!</a>-->
     </div>
 
-    <div th:replace="fragments/footer:: footer"></div>
+    <div th:replace="fragments:: footer"></div>
 </div>
-<script th:replace="fragments/script:: script"></script>
+<script th:replace="fragments:: script"></script>
 </body>
 </html>
