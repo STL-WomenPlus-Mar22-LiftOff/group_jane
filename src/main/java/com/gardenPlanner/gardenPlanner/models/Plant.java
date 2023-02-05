@@ -4,11 +4,14 @@ import com.gardenPlanner.gardenPlanner.models.dto.AbstractEntity;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Plant extends AbstractEntity {
@@ -21,6 +24,9 @@ public class Plant extends AbstractEntity {
     @Valid
     @NotNull
     private PlantDetails plantDetails;
+
+    @ManyToMany(mappedBy = "plants")
+    private final List<GardenArea> gardenAreas = new ArrayList<>();
 
     public Plant(String commonName, PlantDetails plantDetails) {
         this.commonName = commonName;
