@@ -132,7 +132,7 @@ nav{
     justify-content: space-between;
 }
 .logo{
-    width: 100px;
+    max-width: 100px;
     cursor: pointer;
 }
 nav ul li{
@@ -213,3 +213,22 @@ span{
 }
 
 
+/* list/search page css */
+.search{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+  input[type="search"] {
+    outline: 0; //
+    width: 100%;
+    background: var(--color-light);
+    padding: 0 1.6rem;
+    border-radius: var(--rad);
+    appearance: none;
+    transition: all var(--dur) var(--bez);
+    transition-property: width, border-radius;
+    z-index: 1;
+    position: relative;
+  }

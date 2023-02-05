@@ -10,3 +10,16 @@ function getTip(){
     let randomNumber = Math.floor(Math.random() * tips.length)
     document.getElementById('newTipSection').innerHTML = tips[randomNumber];
 }
+
+function list(plant){
+    let fullList;
+
+    for (i=0; i<fullList.length; i++){
+        if (fullList[i].contains(plant)){
+            return fullList[i];
+        } else if (plant = ""){
+            return fullList;
+        }
+    }
+
+}

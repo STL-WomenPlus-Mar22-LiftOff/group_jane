@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <div th:replace="fragments:: head"></div>
+    <title>TimeLeaf List</title>
+</head>
+<body>
+<div class="garden">
+    <div th:replace="fragments:: navbar"></div>
+    <div class="about">
+        <h1><span>TimeLeaf</span>  List</h1>
+        <p>Find the plants and flowers you want for your garden!</p>
+
+        <div class="search">
+            <form onsubmit="event.preventDefault();" role="search">
+                <input id="search" type="search" placeholder="Search for plants..."/>
+                <button type="submit" class="btn-large new-tip-button" onClick="list()">Go</button>
+            </form>
+
+            <br>
+        </div>
+
+
+        <a href="/garden/mygarden">Start Planning Here!</a>
+    </div>
+
+    <div th:replace="fragments:: footer"></div>
+</div>
+
+</body>
+</html>

@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.HashMap;
 
 @Controller
-@RequestMapping(value = "list/plantlist")
+@RequestMapping(value = "/plantlist")
 public class ListController {
 
 
     @GetMapping("")
     public String list(){
-        return "list/plantlist";
+        return "plantlist";
     }
 
     static HashMap<String, String> columnChoices = new HashMap<>();
