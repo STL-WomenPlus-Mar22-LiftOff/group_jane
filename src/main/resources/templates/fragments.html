@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>in progress</title>
+</head>
 <body>
 
 <header th:fragment="eventNav">
@@ -7,6 +11,14 @@
         <li class="nav-item"><a class="nav-link" href="/events">All Events</a></li>
         <li class="nav-item"><a class="nav-link" href="/events/create">Create Event</a></li>
         <li class="nav-item"><a class="nav-link" href="/events/delete">Delete Events</a></li>
+    </ul>
+</header>
+
+<header th:fragment="listNav">
+    <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="/list">All Plants</a></li>
+        <li class="nav-item"><a class="nav-link" href="/list/add">Add Plants</a></li>
+        <li class="nav-item"><a class="nav-link" href="/list/delete">Delete Plants</a></li>
     </ul>
 </header>
 
@@ -29,7 +41,8 @@
     <script src="script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </div>
-<div th:fragment="head2">
+
+<div th:fragment="innerHead">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles.css">
@@ -42,7 +55,7 @@
         <img src="/images/logo.jpg" class="logo">
         <ul>
             <li><a href="">HOME</a></li>
-            <li><a href="/list/plantlist">LIST</a></li>
+            <li><a href="/list/">LIST</a></li>
             <li><a href="/garden/mygarden">MY GARDEN AREA</a></li>
             <li><a href="/events">CALENDAR</a></li>
             <!--            Maybe we can make my account only available once you're logged in? -->
@@ -53,20 +66,134 @@
     </nav>
 </div>
 
+<div th:fragment="listNavBar">
+    <nav>
+        <img src="../images/logo.jpg" class="logo">
+        <ul>
+            <li><a href="../">HOME</a></li>
+            <li><a href="/list/">LIST</a></li>
+            <li><a href="../garden/mygarden">MY GARDEN AREA</a></li>
+            <li><a href="../events">CALENDAR</a></li>
+            <!--            Maybe we can make my account only available once you're logged in? -->
+            <li><a href="../users/myaccount">MY ACCOUNT</a></li>
+            <li><a href="../users/login">LOGIN/REGISTER</a></li>
+            <li> <img src="../images/moon.png" id="icon2"></li>
+        </ul>
+    </nav>
+</div>
 
+<div th:fragment="eventNavBar">
+    <nav>
+        <img src="../images/logo.jpg" class="logo">
+        <ul>
+            <li><a href="../">HOME</a></li>
+            <li><a href="../list/">LIST</a></li>
+            <li><a href="../garden/mygarden">MY GARDEN AREA</a></li>
+            <li><a href="/events">CALENDAR</a></li>
+            <!--            Maybe we can make my account only available once you're logged in? -->
+            <li><a href="../users/myaccount">MY ACCOUNT</a></li>
+            <li><a href="../users/login">LOGIN/REGISTER</a></li>
+            <li> <img src="../images/moon.png" id="icon3"></li>
+        </ul>
+    </nav>
+</div>
+
+<div th:fragment="gardenNavBar">
+    <nav>
+        <img src="../images/logo.jpg" class="logo">
+        <ul>
+            <li><a href="../">HOME</a></li>
+            <li><a href="../list/">LIST</a></li>
+            <li><a href="/garden/mygarden">MY GARDEN AREA</a></li>
+            <li><a href="../events">CALENDAR</a></li>
+            <!--            Maybe we can make my account only available once you're logged in? -->
+            <li><a href="../users/myaccount">MY ACCOUNT</a></li>
+            <li><a href="../users/login">LOGIN/REGISTER</a></li>
+            <li> <img src="../images/moon.png" id="icon4"></li>
+        </ul>
+    </nav>
+</div>
+
+<div th:fragment="userNavbar">
+    <nav>
+        <img src="../images/logo.jpg" class="logo">
+        <ul>
+            <li><a href="../">HOME</a></li>
+            <li><a href="../list/">LIST</a></li>
+            <li><a href="../garden/mygarden">MY GARDEN AREA</a></li>
+            <li><a href="../events">CALENDAR</a></li>
+            <!--            Maybe we can make my account only available once you're logged in? -->
+            <li><a href="/users/myaccount">MY ACCOUNT</a></li>
+            <li><a href="/users/login">LOGIN/REGISTER</a></li>
+            <li> <img src="../images/moon.png" id="icon5"></li>
+        </ul>
+    </nav>
 </div>
 
 <script th:fragment = "script">
-    var icon = document.getElementById("icon");
-    icon.onclick = function(){
-        document.body.classList.toggle("dark-theme");
-        if(document.body.classList.contains("dark-theme")){
+
+        var icon = document.getElementById("icon");
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
             icon.src = "/images/sun.jpg";
-        }else{
+            }else{
             icon.src = "/images/moon.png";
         }
-    }
+}
 </script>
 
+<script th:fragment = "listScript">
+
+        var icon2 = document.getElementById("icon2");
+        icon2.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+            icon2.src = "../images/sun.jpg";
+            }else{
+            icon2.src = "../images/moon.png";
+        }
+}
+</script>
+
+<script th:fragment = "eventScript">
+
+        var icon3 = document.getElementById("icon3");
+        icon3.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+            icon3.src = "../images/sun.jpg";
+            }else{
+            icon3.src = "../images/moon.png";
+        }
+}
+</script>
+
+<script th:fragment = "gardenScript">
+
+        var icon4 = document.getElementById("icon4");
+        icon4.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+            icon4.src = "../images/sun.jpg";
+            }else{
+            icon4.src = "../images/moon.png";
+        }
+}
+</script>
+
+<script th:fragment = "userScript">
+
+        var icon5 = document.getElementById("icon5");
+
+        icon5.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+            icon5.src = "../images/sun.jpg";
+            }else{
+            icon5.src = "../images/moon.png";
+        }
+}
+</script>
 </body>
 </html>

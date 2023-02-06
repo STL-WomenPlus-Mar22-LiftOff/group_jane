@@ -99,6 +99,27 @@ html {
     width: 25px;
     cursor: pointer;
 }
+
+#icon2{
+    width: 25px;
+    cursor: pointer;
+}
+
+#icon3{
+    width: 25px;
+    cursor: pointer;
+}
+
+#icon4{
+    width: 25px;
+    cursor: pointer;
+}
+
+#icon5{
+    width: 25px;
+    cursor: pointer;
+}
+
 nav ul{
     flex: 1;
     text-align: right;
@@ -123,6 +144,19 @@ nav ul{
 navbar{
     height:60vh;
 }
+listNavbar{
+    height:60vh;
+}
+eventNavbar{
+    height:60vh;
+}
+gardenNavbar{
+    height:60vh;
+}
+userNavbar{
+    height:60vh;
+}
+
 nav{
     width: 84%;
     margin:auto;

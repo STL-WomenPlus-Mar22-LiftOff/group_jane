@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
-    <meta charset="UTF-8">
-    <title>Create an Event!</title>
+    <div th:replace="fragments:: innerHead"></div>
 </head>
 <body>
-
+<div class="garden">
+<header th:replace="fragments :: eventNavBar"></header>
 <header th:replace="fragments :: eventNav"></header>
 
 <form method="post">
@@ -42,6 +42,9 @@
         <input type="submit" value="Create" class="btn btn-success">
     </div>
 </form>
+    <div th:replace="fragments:: footer"></div>
+</div>
 
+<script th:replace="fragments:: eventScript"></script>
 </body>
 </html>

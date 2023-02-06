@@ -1,11 +1,12 @@
 package com.gardenPlanner.gardenPlanner.controllers;
 
-import com.gardenPlanner.gardenPlanner.data.EventData;
 import com.gardenPlanner.gardenPlanner.data.EventRepository;
 import com.gardenPlanner.gardenPlanner.models.Event;
 //import com.gardenPlanner.gardenPlanner.models.EventType;
 //import com.gardenPlanner.gardenPlanner.models.dto.EventDTO;
+import com.gardenPlanner.gardenPlanner.models.EventDetails;
 import com.gardenPlanner.gardenPlanner.models.EventType;
+import com.gardenPlanner.gardenPlanner.models.dto.EventDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -84,5 +85,43 @@ public class EventController {
 
         return "events/detail";
     }
+
+//    @GetMapping("edit/{eventId}")
+//    public String displayEditForm(Model model, @PathVariable int eventId){
+//
+//        Optional<Event> eventToEdit = eventRepository.findById(eventId);
+//
+//        if (eventToEdit.isPresent()){
+//        Event finalEvent = eventToEdit.get();
+//
+//        model.addAttribute("event", eventToEdit);
+//        String title = "Edit Event " + finalEvent.getLabel() + " (id=" + eventId + ")";
+//        model.addAttribute("title", title );
+//        }
+//        return "events/edit";
+//    }
+//
+//    @PostMapping("edit")
+//    public String processEditForm(Model model, int eventId, String label, String description, String date, EventType eventType) {
+//
+//        // takes in the optional event from the repository
+//        Optional<Event> eventToEdit = eventRepository.findById(eventId);
+//
+//        //checks to make sure the event is there
+//        if (eventToEdit.isPresent()) {
+//
+//            //converts optional event to Event form if present
+//            Event finalEvent = eventToEdit.get();
+//
+//            finalEvent.setLabel(label);
+//            finalEvent.setEventDetails(new EventDetails(description, date, eventType));
+//
+//            model.addAttribute("event", eventToEdit);
+//
+//
+//            return "events/edit";
+//        }
+//        return "events/detail?{eventID}";
+//    }
 
 }

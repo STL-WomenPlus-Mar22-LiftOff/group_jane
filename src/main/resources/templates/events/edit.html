@@ -4,9 +4,8 @@
     <div th:replace="fragments:: innerHead"></div>
 </head>
 <body>
-<div class="garden">
+<div
 <header th:replace="fragments :: eventNavBar"></header>
-<header th:replace="fragments :: eventNav"></header>
 
 <form method="post">
 
@@ -19,9 +18,9 @@
         </div>
     </th:block>
 
-    <input type="submit" value="Delete" class="btn btn-danger">
+    <input type="submit" value="Edit">
 </form>
-    <div th:replace="fragments:: footer"></div>
+<div th:replace="fragments:: footer"></div>
 </div>
 
 <script th:replace="fragments:: eventScript"></script>

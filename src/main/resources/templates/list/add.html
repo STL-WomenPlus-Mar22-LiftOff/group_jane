@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <div th:replace="fragments:: innerHead"></div>
+</head>
+<body>
+<div class="garden">
+<header th:replace="fragments :: listNavBar"></header>
+<header th:replace="fragments :: listNav"></header>
+
+<form method="post">
+    <div class="form-group">
+        <label>Plant Name
+            <input th:field="${plant.commonName}" class="form-control">
+        </label>
+        <p class="error" th:errors="${plant.commonName}"></p>
+    </div>
+    <div class="form-group">
+        <label> Scientific Name
+            <input th:field="${plant.plantDetails.scientificName}" class="form-control">
+        </label>
+        <p class="error" th:errors="${plant.plantDetails.scientificName}"></p>
+    </div>
+    <div class="form-group">
+        <label>Type
+            <select th:field="${plant.plantDetails.plantType}">
+                <option th:each="type : ${plantTypes}"
+                        th:value="${type}"
+                        th:text="${type.displayName}"
+                ></option>
+            </select>
+            <p class="error" th:errors="${plant.plantDetails.plantType}"></p>
+        </label>
+    </div>
+    <div class="form-group">
+        <label> Flower Colors
+            <input th:field="${plant.plantDetails.flowerColors}" class="form-control">
+            <p class="error" th:errors="${plant.plantDetails.flowerColors}"></p>
+        </label>
+    </div>
+    <div class="form-group">
+        <label> Water Tolerance
+            <input th:field="${plant.plantDetails.waterTolerance}" class="form-control">
+        </label>
+        <p class="error" th:errors="${plant.plantDetails.waterTolerance}"></p>
+    </div>
+    <div class="form-group">
+        <label> Shade Tolerance
+            <input th:field="${plant.plantDetails.shadeTolerance}" class="form-control">
+        </label>
+        <p class="error" th:errors="${plant.plantDetails.shadeTolerance}"></p>
+    </div>
+    <div class="form-group">
+        <label> Ph Range
+            <input th:field="${plant.plantDetails.phRange}" class="form-control">
+        </label>
+        <p class="error" th:errors="${plant.plantDetails.phRange}"></p>
+    </div>
+    <div class="form-group">
+        <label> Edible
+            <input th:field="${plant.plantDetails.isEdible}" class="form-control">
+        </label>
+        <p class="error" th:errors="${plant.plantDetails.isEdible}"></p>
+    </div>
+    <div class="form-group">
+        <label>Description
+            <input th:field="${plant.plantDetails.description}" class="form-control">
+        </label>
+        <p class="error" th:errors="${plant.plantDetails.description}"></p>
+    </div>
+    <div class="form-group">
+        <label> Days to Harvest
+            <input th:field="${plant.plantDetails.daysToHarvest}" class="form-control">
+            <p class="error" th:errors="${plant.plantDetails.daysToHarvest}"></p>
+        </label>
+    </div>
+    <div class="form-group">
+        <label> Variety
+            <input th:field="${plant.plantDetails.variety}" class="form-control">
+            <p class="error" th:errors="${plant.plantDetails.variety}"></p>
+        </label>
+    </div>
+    <div class="form-group">
+        <label> Planting Notes
+            <input th:field="${plant.plantDetails.plantingNotes}" class="form-control">
+            <p class="error" th:errors="${plant.plantDetails.plantingNotes}"></p>
+        </label>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Add Plant" class="btn btn-success">
+    </div>
+</form>
+    <div th:replace="fragments:: footer"></div>
+</div>
+
+<script th:replace="fragments:: listScript"></script>
+</body>
+</html>

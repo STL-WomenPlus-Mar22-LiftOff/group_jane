@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <div th:replace="fragments:: innerHead"></div>
 </head>
 
 <body>
+<div class="garden">
 <h2>Register with TimeLeaf</h2>
-<!--insert navigation fragments-->
+    <div th:replace="fragments:: userNavbar"></div>
 <form method="post">
     <div class="form-group">
         <label>Username
@@ -29,6 +29,9 @@
     <br>
     <input type="submit" class="btn btn-primary" value="Register" />
 </form>
+    <div th:replace="fragments:: footer"></div>
+</div>
 
+<script th:replace="fragments:: userScript"></script>
 </body>
 </html>
