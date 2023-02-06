@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <div th:replace="fragments :: innerHead"></div>
+</head>
+<body>
+<div class="garden">
+    <header th:replace="fragments :: gardenAreaNavBar"></header>
+    <header th:replace="fragments :: gardenAreaNav"></header>
+    <table class="table table-striped">
+        <tr>
+            <th>ID</th>
+            <td th:text="${gardenArea.id}"></td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td th:text="${gardenArea.name}"></td>
+        </tr>
+        <tr>
+            <th>Dimensions</th>
+            <td th:text="${gardenArea.gardenAreaDetails.gardenAreaDimensions}"></td>
+        </tr>
+        <tr>
+            <th>Bed Type</th>
+            <td th:text="${gardenArea.gardenAreaDetails.bedType}"></td>
+        </tr>
+        <tr>
+            <th>Soil Texture</th>
+            <td th:text="${gardenArea.gardenAreaDetails.soilTexture}"></td>
+        </tr>
+        <tr>
+            <th>Perennial</th>
+            <td th:text="${gardenArea.gardenAreaDetails.isPerennial}"></td>
+        </tr>
+        <tr>
+            <th>Shade</th>
+            <td th:text="${gardenArea.gardenAreaDetails.shade}"></td>
+        </tr>
+        <tr>
+            <th>Ph Value</th>
+            <td th:text="${gardenArea.gardenAreaDetails.ph}"></td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td th:text="${gardenArea.gardenAreaDetails.description}"></td>
+        </tr>
+        <tr>
+            <th>Notes</th>
+            <td th:text="${gardenArea.gardenAreaDetails.notes}"></td>
+        </tr>
+    </table>
+    <div th:replace="fragments:: footer"></div>
+</div>
+
+<script th:replace="fragments:: gardenAreaScript"></script>
+</body>
+</html>

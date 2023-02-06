@@ -12,7 +12,7 @@ import javax.validation.Valid;
 import java.util.Optional;
 
 @Controller
-@RequestMapping(value = "list")
+@RequestMapping(value = "plant")
 public class PlantController {
 
     @Autowired
@@ -22,7 +22,7 @@ public class PlantController {
     public String displayAllPlants(Model model) {
         model.addAttribute("title", "All Plants");
         model.addAttribute("plants", plantRepository.findAll());
-        return "list/index";
+        return "plant/index";
     }
 
     @GetMapping("add")
@@ -30,7 +30,7 @@ public class PlantController {
         model.addAttribute("title", "Add Plant");
         model.addAttribute(new Plant());
         model.addAttribute("plantTypes", PlantType.values());
-        return "list/add";
+        return "plant/add";
     }
 
     @PostMapping("add")
@@ -39,7 +39,7 @@ public class PlantController {
         if(errors.hasErrors()) {
             model.addAttribute("title", "Add Plant");
             model.addAttribute("plant", plant);
-            return "list/add";
+            return "plant/add";
         }
         model.addAttribute("plant", plant);
         plantRepository.save(plant);
@@ -50,7 +50,7 @@ public class PlantController {
     public String displayDeletePlantsForm(Model model) {
         model.addAttribute("title", "Delete Plants");
         model.addAttribute("plants", plantRepository.findAll());
-        return "list/delete";
+        return "plant/delete";
     }
 
     @PostMapping("delete")
@@ -78,7 +78,7 @@ public class PlantController {
             model.addAttribute("plant", plant);
         }
 
-        return "list/detail";
+        return "plant/detail";
     }
 
 }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <div th:replace="fragments:: innerHead"></div>
+</head>
+<body>
+<div class="garden">
+    <header th:replace="fragments :: gardenAreaNavBar"></header>
+    <header th:replace="fragments :: gardenAreaNav"></header>
+
+    <form method="post">
+        <div class="form-group">
+            <label>Garden Area Name
+                <input th:field="${gardenArea.name}" class="form-control">
+            </label>
+            <p class="error" th:errors="${gardenArea.name}"></p>
+        </div>
+        <div class="form-group">
+            <label> Soil Depth (Inches)
+                <input th:field="${gardenArea.gardenAreaDetails.soilDepthInches}" class="form-control">
+            </label>
+            <p class="error" th:errors="${gardenArea.gardenAreaDetails.soilDepthInches}"></p>
+        </div>
+        <div class="form-group">
+            <label> Area Width (Inches)
+                <input th:field="${gardenArea.gardenAreaDetails.width}" class="form-control">
+                <p class="error" th:errors="${gardenArea.gardenAreaDetails.widthInches}"></p>
+            </label>
+        </div>
+        <div class="form-group">
+            <label> Area Length (Inches)
+                <input th:field="${gardenArea.gardenAreaDetails.lengthInches}" class="form-control">
+            </label>
+            <p class="error" th:errors="${gardenArea.gardenAreaDetails.lengthInches}"></p>
+        </div>
+        <div class="form-group">
+            <label>Bed Type
+                <select th:field="${gardenArea.gardenAreaDetails.bedType}">
+                    <option th:each="type : ${bedTypes}"
+                            th:value="${type}"
+                            th:text="${type.displayName}"
+                    ></option>
+                </select>
+                <p class="error" th:errors="${gardenArea.gardenAreaDetails.bedType}"></p>
+            </label>
+        </div>
+        <div class="form-group">
+            <label>Soil Texture
+                <select th:field="${gardenArea.gardenAreaDetails.soilTexture}">
+                    <option th:each="texture : ${soilTextures}"
+                            th:value="${texture}"
+                            th:text="${texture.displayName}"
+                    ></option>
+                </select>
+                <p class="error" th:errors="${gardenArea.gardenAreaDetails.soilTexture}"></p>
+            </label>
+        </div>
+        <div class="form-group">
+            <label>Ph Value
+                <select th:field="${gardenArea.gardenAreaDetails.ph}">
+                    <option th:each="ph : ${phValues}"
+                            th:value="${ph}"
+                            th:text="${ph.displayName}"
+                    ></option>
+                </select>
+                <p class="error" th:errors="${gardenArea.gardenAreaDetails.ph}"></p>
+            </label>
+        </div>
+        <div class="form-group">
+            <label> Perennial
+                <input th:field="${gardenArea.gardenAreaDetails.isPerennial}" class="form-control">
+            </label>
+            <p class="error" th:errors="${gardenArea.gardenAreaDetails.isPerennial}"></p>
+        </div>
+        <div class="form-group">
+            <label>Description
+                <input th:field="${gardenArea.gardenAreaDetails.description}" class="form-control">
+            </label>
+            <p class="error" th:errors="${gardenArea.gardenAreaDetails.description}"></p>
+        </div>
+        <div class="form-group">
+            <label> Garden Area Notes
+                <input th:field="${gardenArea.gardenAreaDetails.notes}" class="form-control">
+                <p class="error" th:errors="${gardenArea.gardenAreaDetails.notes}"></p>
+            </label>
+        </div>
+        <div class="form-group">
+            <label> Shade
+                <input th:field="${gardenArea.gardenAreaDetails.shade}" class="form-control">
+            </label>
+            <p class="error" th:errors="${gardenArea.gardenAreaDetails.shade}"></p>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Add Garden Area" class="btn btn-success">
+        </div>
+    </form>
+    <div th:replace="fragments:: footer"></div>
+</div>
+
+<script th:replace="fragments:: gardenAreaScript"></script>
+</body>
+</html>

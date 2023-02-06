@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<head>
+    <div th:replace="fragments :: innerHead"></div>
+</head>
+<body>
+<div class="garden">
+    <header th:replace="fragments :: gardenAreaNavBar"></header>
+    <header th:replace="fragments :: gardenAreaNav"></header>
+
+    <form method="post">
+
+        <th:block th:each="gardenArea : ${gardenAreas}">
+            <div class="form-group">
+                <label>
+                    <span th:text="${gardenArea.name}"></span>
+                    <input type="checkbox" name="gardenAreaIds" th:value="${gardenArea.id}" class="form-control">
+                </label>
+            </div>
+        </th:block>
+
+        <input type="submit" value="Delete" class="btn btn-danger">
+    </form>
+    <div th:replace="fragments:: footer"></div>
+</div>
+
+<script th:replace="fragments:: listScript"></script>
+</body>
+</html>

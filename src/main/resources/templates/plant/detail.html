@@ -5,24 +5,20 @@
 </head>
 <body>
 <div class="garden">
-    <header th:replace="fragments :: listNavBar"></header>
-    <header th:replace="fragments :: listNav"></header>
+    <header th:replace="fragments :: plantNavBar"></header>
+    <header th:replace="fragments :: plantNav"></header>
 <table class="table table-striped">
     <tr>
         <th>ID</th>
         <td th:text="${plant.id}"></td>
     </tr>
     <tr>
-        <th>Scientific Name</th>
-        <td th:text="${plant.plantDetails.scientificName}"></td>
+        <th>Soil Depth</th>
+        <td th:text="${gardenArea.gardenAreaDetails.soilDepthInches}"></td>
     </tr>
     <tr>
-        <th>Plant Type</th>
-        <td th:text="${plant.plantDetails.plantType}"></td>
-    </tr>
-    <tr>
-        <th>Flower Colors</th>
-        <td th:text="${plant.plantDetails.flowerColors}"></td>
+        <th></th>
+        <td th:text="${gardenArea.gardenAreaDetails.soilDepthInches}"></td>
     </tr>
     <tr>
         <th>Edible</th>
@@ -37,17 +33,21 @@
         <td th:text="${plant.plantDetails.shadeTolerance}"></td>
     </tr>
     <tr>
-        <th>Ph Range</th>
-        <td th:text="${plant.plantDetails.phRange}"></td>
+        <th>Ph Value</th>
+        <td th:text="${}"></td>
     </tr>
     <tr>
         <th>Description</th>
         <td th:text="${plant.plantDetails.description}"></td>
     </tr>
+    <tr>
+        <th>Bed Type</th>
+        <td th:text="${gardenArea.gardenAreaDetails.bedType}"></td>
+    </tr>
 </table>
     <div th:replace="fragments:: footer"></div>
 </div>
 
-<script th:replace="fragments:: listScript"></script>
+<script th:replace="fragments:: plantScript"></script>
 </body>
 </html>

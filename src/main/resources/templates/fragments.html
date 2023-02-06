@@ -6,6 +6,14 @@
 </head>
 <body>
 
+<header th:fragment="gardenAreaNav">
+    <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="/gardenArea/add">Create Garden Area</a></li>
+        <li class="nav-item"><a class="nav-link" href="/gardenArea/delete">Delete Garden Area</a></li>
+        <li class="nav-item"><a class="nav-link" href="/garden">My Garden</a></li>
+    </ul>
+</header>
+
 <header th:fragment="eventNav">
     <ul class="nav">
         <li class="nav-item"><a class="nav-link" href="/events">All Events</a></li>
@@ -17,8 +25,21 @@
 <header th:fragment="listNav">
     <ul class="nav">
         <li class="nav-item"><a class="nav-link" href="/list">All Plants</a></li>
-        <li class="nav-item"><a class="nav-link" href="/list/add">Add Plants</a></li>
-        <li class="nav-item"><a class="nav-link" href="/list/delete">Delete Plants</a></li>
+        <li class="nav-item"><a class="nav-link" href="/list/ph">Plants by Ph</a></li>
+        <li class="nav-item"><a class="nav-link" href="/list/shade">Plants by Shade</a></li>
+        <li class="nav-item"><a class="nav-link" href="/list/type">Plants by Type</a></li>
+        <li class="nav-item"><a class="nav-link" href="/list/shade">Plants by Flower Color</a></li>
+        <li class="nav-item"><a class="nav-link" href="/list/shade">Plants by Shade</a></li>
+        <li class="nav-item"><a class="nav-link" href="/list/zone">Plants by Zone</a></li>
+
+    </ul>
+</header>
+
+<header th:fragment="plantNav">
+    <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="/plant">All Plants</a></li>
+        <li class="nav-item"><a class="nav-link" href="/plant/add">Add Plants</a></li>
+        <li class="nav-item"><a class="nav-link" href="/plant/delete">Delete Plants</a></li>
     </ul>
 </header>
 
@@ -55,9 +76,11 @@
         <img src="/images/logo.jpg" class="logo">
         <ul>
             <li><a href="">HOME</a></li>
+            <li><a href="/plant/">PLANTS</a> </li>
             <li><a href="/list/">LIST</a></li>
-            <li><a href="/garden/mygarden">MY GARDEN AREA</a></li>
-            <li><a href="/events">CALENDAR</a></li>
+            <li><a href="/garden/">MY GARDEN</a></li>
+            <li><a href="/gardenArea/">GARDEN AREAS</a> </li>
+            <li><a href="/events/">CALENDAR</a></li>
             <!--            Maybe we can make my account only available once you're logged in? -->
             <li><a href="/users/myaccount">MY ACCOUNT</a></li>
             <li><a href="/users/login">LOGIN/REGISTER</a></li>
@@ -71,8 +94,10 @@
         <img src="../images/logo.jpg" class="logo">
         <ul>
             <li><a href="../">HOME</a></li>
+            <li><a href="../plant/">PLANTS</a> </li>
             <li><a href="/list/">LIST</a></li>
-            <li><a href="../garden/mygarden">MY GARDEN AREA</a></li>
+            <li><a href="../garden/">MY GARDEN</a></li>
+            <li><a href="../gardenArea/">GARDEN AREAS</a> </li>
             <li><a href="../events">CALENDAR</a></li>
             <!--            Maybe we can make my account only available once you're logged in? -->
             <li><a href="../users/myaccount">MY ACCOUNT</a></li>
@@ -87,8 +112,10 @@
         <img src="../images/logo.jpg" class="logo">
         <ul>
             <li><a href="../">HOME</a></li>
+            <li><a href="../plant/">PLANTS</a> </li>
             <li><a href="../list/">LIST</a></li>
-            <li><a href="../garden/mygarden">MY GARDEN AREA</a></li>
+            <li><a href="../garden/">MY GARDEN</a></li>
+            <li><a href="../gardenArea/">GARDEN AREAS</a> </li>
             <li><a href="/events">CALENDAR</a></li>
             <!--            Maybe we can make my account only available once you're logged in? -->
             <li><a href="../users/myaccount">MY ACCOUNT</a></li>
@@ -103,8 +130,10 @@
         <img src="../images/logo.jpg" class="logo">
         <ul>
             <li><a href="../">HOME</a></li>
+            <li><a href="../plant/">PLANTS</a> </li>
             <li><a href="../list/">LIST</a></li>
-            <li><a href="/garden/mygarden">MY GARDEN AREA</a></li>
+            <li><a href="/garden/">MY GARDEN</a></li>
+            <li><a href="../gardenArea/">GARDEN AREAS</a></li>
             <li><a href="../events">CALENDAR</a></li>
             <!--            Maybe we can make my account only available once you're logged in? -->
             <li><a href="../users/myaccount">MY ACCOUNT</a></li>
@@ -119,13 +148,51 @@
         <img src="../images/logo.jpg" class="logo">
         <ul>
             <li><a href="../">HOME</a></li>
+            <li><a href="../plant/">PLANTS</a> </li>
             <li><a href="../list/">LIST</a></li>
-            <li><a href="../garden/mygarden">MY GARDEN AREA</a></li>
+            <li><a href="../garden/">MY GARDEN</a></li>
+            <li><a href="../gardenArea/">GARDEN AREAS</a> </li>
             <li><a href="../events">CALENDAR</a></li>
             <!--            Maybe we can make my account only available once you're logged in? -->
             <li><a href="/users/myaccount">MY ACCOUNT</a></li>
             <li><a href="/users/login">LOGIN/REGISTER</a></li>
             <li> <img src="../images/moon.png" id="icon5"></li>
+        </ul>
+    </nav>
+</div>
+
+<div th:fragment="gardenAreaNavbar">
+    <nav>
+        <img src="../images/logo.jpg" class="logo">
+        <ul>
+            <li><a href="../">HOME</a></li>
+            <li><a href="../plant/">PLANTS</a> </li>
+            <li><a href="../list/">LIST</a></li>
+            <li><a href="/garden/">MY GARDEN</a></li>
+            <li><a href="/gardenArea/">GARDEN AREAS</a> </li>
+            <li><a href="../events">CALENDAR</a></li>
+            <!--            Maybe we can make my account only available once you're logged in? -->
+            <li><a href="../users/myaccount">MY ACCOUNT</a></li>
+            <li><a href="../users/login">LOGIN/REGISTER</a></li>
+            <li> <img src="../images/moon.png" id="icon7"></li>
+        </ul>
+    </nav>
+</div>
+
+<div th:fragment="plantNavbar">
+    <nav>
+        <img src="../images/logo.jpg" class="logo">
+        <ul>
+            <li><a href="../">HOME</a></li>
+            <li><a href="/plant/">PLANTS</a> </li>
+            <li><a href="../list/">LIST</a></li>
+            <li><a href="../garden/">MY GARDEN</a></li>
+            <li><a href="/gardenArea/">GARDEN AREAS</a> </li>
+            <li><a href="../events">CALENDAR</a></li>
+            <!--            Maybe we can make my account only available once you're logged in? -->
+            <li><a href="../users/myaccount">MY ACCOUNT</a></li>
+            <li><a href="../users/login">LOGIN/REGISTER</a></li>
+            <li> <img src="../images/moon.png" id="icon6"></li>
         </ul>
     </nav>
 </div>
@@ -192,6 +259,34 @@
             icon5.src = "../images/sun.jpg";
             }else{
             icon5.src = "../images/moon.png";
+        }
+}
+</script>
+
+<script th:fragment = "plantScript">
+
+        var icon6 = document.getElementById("icon6");
+
+        icon5.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+            icon6.src = "../images/sun.jpg";
+            }else{
+            icon6.src = "../images/moon.png";
+        }
+}
+</script>
+
+<script th:fragment = "gardenAreaScript">
+
+        var icon7 = document.getElementById("icon7");
+
+        icon7.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+            icon7.src = "../images/sun.jpg";
+            }else{
+            icon7.src = "../images/moon.png";
         }
 }
 </script>

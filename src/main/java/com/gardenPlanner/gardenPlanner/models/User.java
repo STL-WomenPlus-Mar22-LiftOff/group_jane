@@ -4,6 +4,7 @@ import com.gardenPlanner.gardenPlanner.models.dto.AbstractEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -19,6 +20,9 @@ public class User extends AbstractEntity {
 //    @NotNull
 //    @Size(min = 2, max = 3)
 //    private String Zone;
+
+    @OneToOne(mappedBy = "user")
+    private Garden garden;
 
     @NotNull
     private String pwHash;
