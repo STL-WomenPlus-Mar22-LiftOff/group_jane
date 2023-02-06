@@ -22,9 +22,7 @@ public class PlantDetails extends AbstractEntity {
     @Size(min = 3, max = 80, message = "Scientific name should be between 3 and 80 characters.")
     private String scientificName;
 
-    @NotBlank(message = "Flower colors are required!")
-    @Size(min = 3, max = 100, message = "Flower colors should be between 3 and 100 characters.")
-    private String flowerColors;
+    private FlowerColor flowerColors;
 
     private PlantType plantType;
 
@@ -53,7 +51,7 @@ public class PlantDetails extends AbstractEntity {
     @Size(min = 1, max = 5, message = "Ph range must be between 1 and 5 characters")
     private String phRange;
 
-    public PlantDetails(Plant plant, String description, String scientificName, String flowerColors, PlantType plantType, boolean isEdible, String waterTolerance, int daysToHarvest, String variety, String plantingNotes, String shadeTolerance, String phRange) {
+    public PlantDetails(Plant plant, String description, String scientificName, FlowerColor flowerColors, PlantType plantType, boolean isEdible, String waterTolerance, int daysToHarvest, String variety, String plantingNotes, String shadeTolerance, String phRange) {
         this.plant = plant;
         this.description = description;
         this.scientificName = scientificName;
@@ -87,11 +85,11 @@ public class PlantDetails extends AbstractEntity {
         this.scientificName = scientificName;
     }
 
-    public String getFlowerColors() {
+    public FlowerColor getFlowerColors() {
         return flowerColors;
     }
 
-    public void setFlowerColors(String flowerColors) {
+    public void setFlowerColors(FlowerColor flowerColors) {
         this.flowerColors = flowerColors;
     }
 

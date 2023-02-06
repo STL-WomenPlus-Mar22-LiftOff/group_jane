@@ -30,6 +30,7 @@ public class PlantController {
         model.addAttribute("title", "Add Plant");
         model.addAttribute(new Plant());
         model.addAttribute("plantTypes", PlantType.values());
+        model.addAttribute("flowerColors", FlowerColor.values());
         return "list/add";
     }
 

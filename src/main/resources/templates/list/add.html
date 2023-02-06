@@ -33,9 +33,14 @@
         </label>
     </div>
     <div class="form-group">
-        <label> Flower Colors
-            <input th:field="${plant.plantDetails.flowerColors}" class="form-control">
-            <p class="error" th:errors="${plant.plantDetails.flowerColors}"></p>
+        <label>Flower Color
+            <select th:field="${plant.plantDetails.flowerColors}">
+                <option th:each="color : ${flowerColors}"
+                        th:value="${color}"
+                        th:text="${color.displayName}"
+                ></option>
+            </select>
+            <p class="error" th:errors="${plant.plantDetails.plantType}"></p>
         </label>
     </div>
     <div class="form-group">
