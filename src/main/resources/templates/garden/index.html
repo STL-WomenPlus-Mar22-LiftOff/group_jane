@@ -5,7 +5,17 @@
 </head>
 <body>
 <header th:replace="fragments :: gardenNavBar"></header>
-My Garden Page in progress
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Garden Areas</th>
+    </tr>
+    </thead>
+    <tr th:each="gardenArea : ${gardenAreas}">
+        <td><a th:href="'/gardenArea/detail?gardenAreaId=' + ${gardenArea.id}" th:text="${gardenArea.name}"></a></td>
+    </tr>
+</table>
 
 </body>
 </html>

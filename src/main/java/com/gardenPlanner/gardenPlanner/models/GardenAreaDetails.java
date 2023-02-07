@@ -31,25 +31,22 @@ public class GardenAreaDetails extends AbstractEntity {
     @Size(min = 3, max = 500, message = "Notes should be between 3 and 500 characters.")
     private String notes;
 
-    @NotNull (message = "")
+    @NotNull (message = "Soil Depth (Inches) is required.")
     private String soilDepthInches;
 
-    @NotNull (message = "")
+    @NotNull (message = "Bed Width (Inches) is required.")
     private String widthInches;
 
-    @NotNull (message = "")
+    @NotNull (message = "Bed Length (Inches) is required")
     private String lengthInches;
-
-    @NotNull (message = "")
-    private boolean isPerennial;
 
     @NotNull(message = "Shade is required")
     @Size(min = 1, max = 50, message = "Shade must be between 1 and 50 characters.")
     private String shade;
 
-    private String gardenAreaDimensions = lengthInches + " Length x " + widthInches + " Width x " + soilDepthInches + " Depth";
+//    private String gardenAreaDimensions = lengthInches + " Length x " + widthInches + " Width x " + soilDepthInches + " Depth";
 
-    public GardenAreaDetails(GardenArea gardenArea, SoilTexture soilTexture, Ph ph, BedType bedType, String description, String notes, String shade, String soilDepthInches, String widthInches, String lengthInches, boolean isPerennial) {
+    public GardenAreaDetails(GardenArea gardenArea, SoilTexture soilTexture, Ph ph, BedType bedType, String description, String notes, String shade, String soilDepthInches, String widthInches, String lengthInches) {
         this.gardenArea = gardenArea;
         this.soilTexture = soilTexture;
         this.ph = ph;
@@ -59,8 +56,10 @@ public class GardenAreaDetails extends AbstractEntity {
         this.soilDepthInches = soilDepthInches;
         this.widthInches = widthInches;
         this.lengthInches = lengthInches;
-        this.isPerennial = isPerennial;
         this.shade=shade;
+    }
+
+    public GardenAreaDetails() {
     }
 
     public GardenArea getGardenArea() {
@@ -123,15 +122,27 @@ public class GardenAreaDetails extends AbstractEntity {
         return lengthInches;
     }
 
-    public boolean isPerennial() {
-        return isPerennial;
+    public void setSoilDepthInches(String soilDepthInches) {
+        this.soilDepthInches = soilDepthInches;
     }
 
-    public void setPerennial(boolean perennial) {
-        isPerennial = perennial;
+    public void setWidthInches(String widthInches) {
+        this.widthInches = widthInches;
     }
 
-    public String getGardenAreaDimensions() {
-        return gardenAreaDimensions;
+    public void setLengthInches(String lengthInches) {
+        this.lengthInches = lengthInches;
     }
+
+    public String getShade() {
+        return shade;
+    }
+
+    public void setShade(String shade) {
+        this.shade = shade;
+    }
+
+    //    public String getGardenAreaDimensions() {
+//        return gardenAreaDimensions;
+//    }
 }

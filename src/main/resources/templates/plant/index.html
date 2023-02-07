@@ -5,8 +5,8 @@
 </head>
 <body>
 <div class="garden">
-    <header th:replace="fragments :: listNavBar"></header>
-    <header th:replace="fragments :: listNav"></header>
+    <header th:replace="fragments :: plantNavBar"></header>
+    <header th:replace="fragments :: plantNav"></header>
 <table class="table table-striped">
     <thead>
     <tr>
@@ -14,12 +14,12 @@
     </tr>
     </thead>
     <tr th:each="plant : ${plants}">
-        <td><a th:href="'/list/detail?plantId=' + ${plant.id}" th:text="${plant.commonName}"></a></td>
+        <td><a th:href="'/plant/detail?plantId=' + ${plant.id}" th:text="${plant.commonName}"></a></td>
     </tr>
 </table>
     <div th:replace="fragments:: footer"></div>
 </div>
 
-<script th:replace="fragments:: listScript"></script>
+<script th:replace="fragments:: plantScript"></script>
 </body>
 </html>

@@ -21,9 +21,9 @@ public class GardenAreaController {
 
     @GetMapping("")
     public String displayAllGardenAreas(Model model) {
-        model.addAttribute("title", "All Garden Areas");
+        model.addAttribute("title", "My Garden");
         model.addAttribute("gardenAreas", gardenAreaRepository.findAll());
-        return ("garden/index");
+        return ("gardenArea/index");
     }
     @GetMapping("add")
     public String displayAddGardenAreaForm(Model model) {
@@ -32,6 +32,7 @@ public class GardenAreaController {
         model.addAttribute("bedTypes", BedType.values());
         model.addAttribute("soilTextures", SoilTexture.values());
         model.addAttribute("phValues", Ph.values());
+        model.addAttribute("flowerColors", FlowerColor.values());
         return "gardenArea/add";
     }
 
@@ -41,6 +42,10 @@ public class GardenAreaController {
         if(errors.hasErrors()) {
             model.addAttribute("title", "Add Garden Area");
             model.addAttribute("gardenArea", gardenArea);
+            model.addAttribute("bedTypes", BedType.values());
+            model.addAttribute("soilTextures", SoilTexture.values());
+            model.addAttribute("phValues", Ph.values());
+            model.addAttribute("flowerColors", FlowerColor.values());
             return "gardenArea/add";
         }
         model.addAttribute("gardenArea", gardenArea);

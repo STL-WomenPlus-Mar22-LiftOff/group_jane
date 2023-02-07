@@ -23,7 +23,7 @@
         </div>
         <div class="form-group">
             <label> Area Width (Inches)
-                <input th:field="${gardenArea.gardenAreaDetails.width}" class="form-control">
+                <input th:field="${gardenArea.gardenAreaDetails.widthInches}" class="form-control">
                 <p class="error" th:errors="${gardenArea.gardenAreaDetails.widthInches}"></p>
             </label>
         </div>
@@ -67,12 +67,6 @@
             </label>
         </div>
         <div class="form-group">
-            <label> Perennial
-                <input th:field="${gardenArea.gardenAreaDetails.isPerennial}" class="form-control">
-            </label>
-            <p class="error" th:errors="${gardenArea.gardenAreaDetails.isPerennial}"></p>
-        </div>
-        <div class="form-group">
             <label>Description
                 <input th:field="${gardenArea.gardenAreaDetails.description}" class="form-control">
             </label>
@@ -93,6 +87,8 @@
         <div class="form-group">
             <input type="submit" value="Add Garden Area" class="btn btn-success">
         </div>
+
+
     </form>
     <div th:replace="fragments:: footer"></div>
 </div>

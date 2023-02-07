@@ -120,6 +120,16 @@ html {
     cursor: pointer;
 }
 
+#icon6{
+    width: 25px;
+    cursor: pointer;
+}
+
+#icon7{
+    width: 25px;
+    cursor: pointer;
+}
+
 nav ul{
     flex: 1;
     text-align: right;

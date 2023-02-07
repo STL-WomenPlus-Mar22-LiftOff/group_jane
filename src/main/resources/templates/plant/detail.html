@@ -13,16 +13,32 @@
         <td th:text="${plant.id}"></td>
     </tr>
     <tr>
-        <th>Soil Depth</th>
-        <td th:text="${gardenArea.gardenAreaDetails.soilDepthInches}"></td>
+        <th>Common Name</th>
+        <td th:text="${plant.commonName}"></td>
     </tr>
     <tr>
-        <th></th>
-        <td th:text="${gardenArea.gardenAreaDetails.soilDepthInches}"></td>
+        <th>Scientific Name</th>
+        <td th:text="${plant.plantDetails.scientificName}"></td>
+    </tr>
+    <tr>
+        <th>Plant Type</th>
+        <td th:text="${plant.plantDetails.plantType}"></td>
     </tr>
     <tr>
         <th>Edible</th>
         <td th:text="${plant.plantDetails.isEdible}"></td>
+    </tr>
+    <tr>
+        <th>Flower Color</th>
+        <td th:text="${plant.plantDetails.flowerColors}"></td>
+    </tr>
+    <tr>
+        <th>Variety</th>
+        <td th:text="${plant.plantDetails.variety}"></td>
+    </tr>
+    <tr>
+        <th>Days to Harvest</th>
+        <td th:text="${plant.plantDetails.daysToHarvest}"></td>
     </tr>
     <tr>
         <th>Water Tolerance</th>
@@ -33,16 +49,16 @@
         <td th:text="${plant.plantDetails.shadeTolerance}"></td>
     </tr>
     <tr>
-        <th>Ph Value</th>
-        <td th:text="${}"></td>
+        <th>Ph Range</th>
+        <td th:text="${plant.plantDetails.phRange}"></td>
     </tr>
     <tr>
         <th>Description</th>
         <td th:text="${plant.plantDetails.description}"></td>
     </tr>
     <tr>
-        <th>Bed Type</th>
-        <td th:text="${gardenArea.gardenAreaDetails.bedType}"></td>
+        <th>Planting Notes</th>
+        <td th:text="${plant.plantDetails.plantingNotes}"></td>
     </tr>
 </table>
     <div th:replace="fragments:: footer"></div>
