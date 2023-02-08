@@ -81,4 +81,17 @@ public class PlantController {
         return "list/detail";
     }
 
+    @GetMapping("ph")
+    public String displayByFilteredpH(Model model) {
+        model.addAttribute("title", "Filter by pH");
+        model.addAttribute("plants", plantRepository.findAll());
+        return "list/ph";
+    }
+
+    @PostMapping("ph")
+    public String showpH() {
+
+            return "list/ph";
+    }
+
 }

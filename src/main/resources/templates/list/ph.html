@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <div th:replace="fragments :: innerHead"></div>
+</head>
+<body>
+<div class="garden">
+    <header th:replace="fragments :: listNavBar"></header>
+    <header th:replace="fragments :: listNav"></header>
+
+    <script src="extensions/natural-sorting/bootstrap-table-natural-sorting.js"></script>
+
+        <table class="table" id="sortTable">
+        <tr>
+            <th class ="numeric-sort">pH</th>
+            <th>Plant Name</th>
+            <th>Plant Type</th>
+        </tr>
+
+
+        <tr th:block th:each="plant : ${plants}">
+<!--                <script type="text/javascript">-->
+<!--                    function sort(arr){-->
+<!--                        arr.sort(function(a,b){-->
+<!--                            return a-b;-->
+<!--                            }-->
+<!--                        }-->
+<!--                </script>-->
+<!--            <input type = "button" onclick = "sort(arr)" value = "Display">-->
+            <td th:data-sortable="true" th:data-sorter="numericOnly" th:text="${plant.plantDetails.phRange}"></td>
+            <td th:text="${plant.commonName}"></td>
+            <td th:text="${plant.plantDetails.plantType}"></td>
+
+<!--                    <input type="checkbox" name="plantIds" th:value="${plant.id}" class="form-control">-->
+
+        </th:block>
+        </tr>
+    </table>
+    <script>
+    $('#sortTable').DataTable();
+    </script>
+
+    <div th:replace="fragments:: footer"></div>
+</div>
+
+<script th:replace="fragments:: listScript"></script>
+</body>
+</html>
