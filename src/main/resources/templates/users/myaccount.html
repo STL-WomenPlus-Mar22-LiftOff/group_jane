@@ -6,18 +6,22 @@
     <title>TimeLeaf Garden App | My Account </title>
 </head>
 <body>
-<div class="garden">
     <div th:replace="fragments:: navbar"></div>
-    <div class="about">
-        <h1>Welcome to your <span>Garden Profile</span>!</h1>
-<!--        <p>Need help planning your next harvest or floral garden oasis? The TimeLeaf-->
-<!--            garden planner is here to help!-->
-<!--        </p>-->
-<!--        <a href="/garden/mygarden">Start Planning Here!</a>-->
+    <div class="container" style="margin-top:50px">
+        <h1>My Profile</h1>
+        <h2>Gardener Level: Green Thumb</h2>
+        <img src="/img/profile.jpg" class="rounded" alt="Avatar" width="204" height="136" style="margin-top:50px" id="profile">
+        <h3 style="margin-top:50px"> USERNAME: PlantLoverGirl</h3>
+        <h3>GROW ZONE: Zone6 </h3>
+
+    </div>
+    <div class="container">
+        <h1 class="text-center"></h1>
     </div>
 
-    <div th:replace="fragments:: footer"></div>
 </div>
+    <div th:replace="fragments:: footer"></div>
+
 <script th:replace="fragments:: script"></script>
 </body>
 </html>

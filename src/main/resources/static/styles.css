@@ -1,15 +1,7 @@
-html {
-    height: 100%;
-  }
-
-  body {
+ body {
     height: 100%;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    background-color: #3a3a3a;
+    background:var(--primary-color);
   }
 
   #main-holder {
@@ -103,23 +95,6 @@ nav ul{
     flex: 1;
     text-align: right;
 }
-.garden{
-    height: 100vh;
-    width: 100%;
-    background:var(--primary-color);
-    /*background-position: center;*/
-    font-family: sans-serif;
-    position: relative;
-    overflow-x: hidden;
-}
-.footer{
-    height: 30vh;
-    width: 100%;
-    background:var(--primary-color);
-    background-position: center;
-    font-family: sans-serif;
-    position: relative;
-}
 navbar{
     height:60vh;
 }
@@ -176,16 +151,10 @@ span{
     margin: 30px 0;
     border-radius: 5px;
 }
-/*header{
-    padding: 2cm;
-    background-color: ver(--tertiary-color);
-    margin-top: 2cm;
-    text-align: center;
-    color:ver(--secondary-color);
-}*/
-/*.tip{
-    font-size: 20cm;
-}*/
+#main{
+overflow: auto;
+padding-bottom: 100px;
+}
 .btn-large{
     margin: 0.5cm;
 }
@@ -209,7 +178,12 @@ span{
 }
 .new-tip-button:hover{
     color: var(--secondary-color);
-    /*background-color: ver(--primary-color)*/
 }
-
+.footer{
+    background:var(--primary-color);
+    background-position: center;
+    font-family: sans-serif;
+    position: center;
+    overflow-x: hidden;
+}
 
