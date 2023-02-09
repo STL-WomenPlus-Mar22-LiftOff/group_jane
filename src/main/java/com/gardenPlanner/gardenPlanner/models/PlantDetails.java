@@ -50,7 +50,7 @@ public class PlantDetails extends AbstractEntity {
     private String shadeTolerance;
 
     @NotBlank(message = "Ph range is required!")
-    @Size(min = 1, max = 5, message = "Ph range must be between 1 and 5 characters")
+    @Size(min = 1, max = 50, message = "Ph range must be between 1 and 50 characters")
     private String phRange;
 
     public PlantDetails(Plant plant, String description, String scientificName, String flowerColors, PlantType plantType, boolean isEdible, String waterTolerance, int daysToHarvest, String variety, String plantingNotes, String shadeTolerance, String phRange) {

@@ -23,6 +23,11 @@ public class GardenController {
     @Autowired
     private GardenAreaRepository gardenAreaRepository;
 
+    @GetMapping("")
+    public String displayGarden () {
+        return "garden/index";
+    }
+
     @GetMapping("detail")
     public String displayGardenAreaDetails(@RequestParam Integer gardenId, Model model) {
 

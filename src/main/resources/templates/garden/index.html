@@ -4,6 +4,7 @@
     <div th:replace="fragments :: innerHead"></div>
 </head>
 <body>
+<div class="garden">
 <header th:replace="fragments :: gardenNavBar"></header>
 
 <table class="table table-striped">
@@ -16,6 +17,6 @@
         <td><a th:href="'/gardenArea/detail?gardenAreaId=' + ${gardenArea.id}" th:text="${gardenArea.name}"></a></td>
     </tr>
 </table>
-
+</div>
 </body>
 </html>
